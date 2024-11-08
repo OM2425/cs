@@ -1,0 +1,8 @@
+*** EMAIL HEADER DETAILS ***
+
+To: example_receiver@gmail.com
+From: sender@example.com
+To: receiver1@example.com, receiver2@example.com
+Bcc: hidden_receiver@example.com
+Subject: Example Email Header Analysis
+Date: Tue, 08 July 2014 11:13:43 +0000

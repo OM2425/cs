@@ -1,0 +1,106 @@
+ALL
+
+To install VirtualBox:
+
+bash
+Copy code
+# Update and install necessary packages
+sudo apt update
+sudo apt install virtualbox
+
+# Verify VirtualBox installation
+virtualbox --help
+
+
+====================
+
+2. Banner Grabbing with Telnet and Netcat
+Telnet for Banner Grabbing:
+
+bash
+Copy code
+# Open a terminal
+telnet <target_IP> <port>
+
+# Example (HTTP port 80)
+telnet google.com 80
+
+# Once connected, type:
+GET / HTTP/1.1
+Netcat for Banner Grabbing:
+
+bash
+Copy code
+# Open a terminal
+nc -v -n <target_IP> <port>
+
+# Example (HTTP port 80)
+nc -v -n google.com 80
+
+# Type to retrieve banner:
+GET / HTTP/1.1
+
+
+===============
+
+
+3. Email Header Analysis in Python
+Here’s an improved version of the Python script:
+
+python
+Copy code
+import re
+
+with open("input.txt", "r") as emails, open("op.txt", "w") as results:
+    results.write("*** EMAIL HEADER DETAILS ***\n")
+    for line in emails:
+        if "From: " in line:
+            address = re.findall(r'[\w\.-]+@[\w\.-]+', line)
+            if address:
+                results.write(f"\nFrom: {address[0]}")
+        if "To: " in line:
+            address = re.findall(r'[\w\.-]+@[\w\.-]+', line)
+            if address:
+                results.write("\nTo: " + ", ".join(address))
+        if "Bcc: " in line:
+            address = re.findall(r'[\w\.-]+@[\w\.-]+', line)
+            if address:
+                results.write("\nBcc: " + ", ".join(address))
+        if "Date: " in line:
+            results.write("\nDate: " + line.split("Date: ")[1].strip())
+        if "Subject: " in line:
+            results.write("\nSubject: " + line.split("Subject: ")[1].strip())
+
+
+=====================
+
+
+4. Active and Passive Fingerprinting with Xprobe2 and Nmap
+Using Nmap:
+
+bash
+Copy code
+# Active OS fingerprinting
+nmap -O <target_IP>
+
+# Passive fingerprinting (useful when scanning silently)
+sudo nmap -sP <target_IP>/24
+
+
+=============
+
+5. Port Scanning with Nmap
+Nmap for Port Scanning:
+
+bash
+Copy code
+# Simple scan
+nmap <target_IP>
+
+# Scan with verbose output
+nmap -v <target_IP>
+
+# Scan specific port range
+nmap -p 1-1000 <target_IP>
+
+===========

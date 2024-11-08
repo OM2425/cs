@@ -1,0 +1,14 @@
+From - Tue July 08 11:13:12 2014
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Delivered-To: example_receiver@gmail.com
+Received: by 192.48.48.3 with SMTP id v3cs417003nfv; Tue, 08 July 2014 11:13:43 -0800 (PST)
+Return-Path: <example_sender@gmail.com>
+Received: from mail.example.com (mail.example.com [192.168.1.1])
+    by mx.example.com with ESMTP id e13si6347910qbe.2007.01.15.10.13.58;
+    Tue, 08 July 2014 11:13:43 -0800 (PST)
+From: sender@example.com
+To: receiver1@example.com, receiver2@example.com
+Bcc: hidden_receiver@example.com
+Subject: Example Email Header Analysis
+Date: Tue, 08 July 2014 11:13:43 +0000
